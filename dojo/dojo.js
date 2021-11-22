@@ -111,7 +111,7 @@
       ia.callback || b.callback || z.callback; d.boot = ub || vb ? [ub || [], vb] : 0
   }
 })(function (b) { return b.dojoConfig || b.djConfig || b.require || {} }, {
-  async: 0, baseUrl: "https://bawaut.cp4a.apps.ibmdev.ibmcloudlab.com/dojo", hasCache: { "config-selectorEngine": "acme", "config-tlmSiblingOfDojo": 1, "dojo-built": 1, "dojo-has-api": 1, "dojo-loader": 1, "dojo-undef-api": 0, dom: 1, "extend-esri": 1, "host-browser": 1 }, packages: [{ location: "../dijit", name: "dijit" }, { location: "../dojox", name: "dojox" }, { location: "../put-selector", main: "put", name: "put-selector" },
+  async: 0, baseUrl: "https://esri-maps.apps.ibmdev.ibmcloudlab.com/dojo", hasCache: { "config-selectorEngine": "acme", "config-tlmSiblingOfDojo": 1, "dojo-built": 1, "dojo-has-api": 1, "dojo-loader": 1, "dojo-undef-api": 0, dom: 1, "extend-esri": 1, "host-browser": 1 }, packages: [{ location: "../dijit", name: "dijit" }, { location: "../dojox", name: "dojox" }, { location: "../put-selector", main: "put", name: "put-selector" },
   { location: "../xstyle", name: "xstyle" }, { location: "../dgrid", main: "OnDemandGrid", name: "dgrid" }, { location: "../dgrid1", main: "OnDemandGrid", name: "dgrid1" }, { location: "../dstore", main: "Store", name: "dstore" }, { location: "../moment", main: "moment", name: "moment" }, { location: "../esri", name: "esri" }, { location: ".", name: "dojo" }]
 });
 require({
