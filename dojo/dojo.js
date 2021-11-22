@@ -43,7 +43,7 @@
         } else F && F(); return V
       }, Fa = function (g) { if (!g) return d; var F = g.require; F || (F = function (N, O, V) { return sa(N, O, V, g, F) }, g.require = f(F, d), F.module = g, F.toUrl = function (N) { return jb(N, g) }, F.toAbsMid = function (N) { return bb(N, g) }, v("dojo-undef-api") && (F.undef = function (N) { d.undef(N, g) }), F.syncLoadNls = function (N) { N = Oa(N, g); var O = oa[N.mid]; if (!O || !O.executed) if (Ea = na[N.mid] || na["url:" + N.url]) Va(Ea), O = oa[N.mid]; return O && O.executed && O.result }); return F }, ja = [], Ha = [], fa = {}, xa = function (g) {
         g.injected =
-        1; fa[g.mid] = 1; g.url && (fa[g.url] = g.pack || 1); kb()
+          1; fa[g.mid] = 1; g.url && (fa[g.url] = g.pack || 1); kb()
       }, za = function (g) { g.injected = 2; delete fa[g.mid]; g.url && delete fa[g.url]; m(fa) && (Wa(), "xd" == y && (y = "sync")) }, Ia = d.idle = function () { return !Ha.length && m(fa) && !ja.length && !Pa }; var Ja = function (g, F) { if (F) for (var N = 0; N < F.length; N++)if (F[N][2].test(g)) return F[N]; return 0 }, lb = function (g) { var F = []; for (g = g.replace(/\\/g, "/").split("/"); g.length;) { var N = g.shift(); if (".." == N && F.length && ".." != O) { F.pop(); var O = F[F.length - 1] } else "." != N && F.push(O = N) } return F.join("/") },
         Ua = function (g, F, N, O) { var V = d.isXdUrl(O); return { pid: g, mid: F, pack: N, url: O, executed: 0, def: 0, isXd: V, isAmd: !!(V || ca[g] && ca[g].isAmd) } }, ob = function (g, F, N, O, V, X, ka, Aa, Da, ab) {
           var Ka, mb, Ba; var cb = /^\./.test(g); if (/(^\/)|(:)|(\.js$)/.test(g) || cb && !F) return Ua(0, g, 0, g); g = lb(cb ? F.mid + "/../" + g : g); if (/^\./.test(g)) throw e("irrationalPath", g); ab || cb || !X.star || (Ba = Ja(g, X.star[1])); !Ba && F && (Ba = (Ba = Ja(F.mid, X)) && Ja(g, Ba[1])); Ba && (g = Ba[1] + g.substring(Ba[3])); F = (ma = g.match(/^([^\/]+)(\/(.+))?$/)) ? ma[1] : ""; (Ka = N[F]) ?
@@ -68,7 +68,7 @@
         }, Pa = 0, Na = function (g) { try { Pa++, g() } catch (F) { throw F; } finally { Pa-- } Ia() && U("idle", []) }, Ga = function () { Pa || Na(function () { C(); for (var g, F, N = 0; N < ja.length;)g = fb, F = ja[N], Ma(F), g != fb ? (C(), N = 0) : N++ }) }; var Ta = "function" == typeof b.fixupUrl ? b.fixupUrl :
           function (g) { g += ""; return g + (va ? (/\?/.test(g) ? "\x26" : "?") + va : "") }; v("dojo-undef-api") && (d.undef = function (g, F) { g = Ca(g, F); za(g); f(g, { def: 0, executed: 0, injected: 0, node: 0, load: 0 }) }); void 0 === v("dojo-loader-eval-hint-url") && v.add("dojo-loader-eval-hint-url", 1); var sb = function (g) { var F = g.plugin; 5 !== F.executed || F.load || Xa(F); var N = function (O) { g.result = O; za(g); La(g); Ga() }; F.load ? F.load(g.prid, g.req, N) : F.loadQ ? F.loadQ.push(g) : (F.loadQ = [g], ja.unshift(F), Sa(F)) }, Ea = 0, Ra = 0, gb = 0, Va = function (g, F) {
             v("config-stripStrict") &&
-            (g = g.replace(/(["'])use strict\1/g, "")); gb = 1; if (v("config-dojo-loader-catches")) try { g === Ea ? Ea.call(null) : d.eval(g, v("dojo-loader-eval-hint-url") ? F.url : F.mid) } catch (N) { U("error", e("evalModuleThrew", F)) } else g === Ea ? Ea.call(null) : d.eval(g, v("dojo-loader-eval-hint-url") ? F.url : F.mid); gb = 0
+              (g = g.replace(/(["'])use strict\1/g, "")); gb = 1; if (v("config-dojo-loader-catches")) try { g === Ea ? Ea.call(null) : d.eval(g, v("dojo-loader-eval-hint-url") ? F.url : F.mid) } catch (N) { U("error", e("evalModuleThrew", F)) } else g === Ea ? Ea.call(null) : d.eval(g, v("dojo-loader-eval-hint-url") ? F.url : F.mid); gb = 0
           }, Sa = function (g) {
             var F = g.mid, N = g.url; if (!(g.executed || g.injected || fa[F] || g.url && (g.pack && fa[g.url] === g.pack || 1 == fa[g.url]))) if (xa(g), g.plugin) sb(g); else {
               var O = function () {
@@ -111,7 +111,7 @@
       ia.callback || b.callback || z.callback; d.boot = ub || vb ? [ub || [], vb] : 0
   }
 })(function (b) { return b.dojoConfig || b.djConfig || b.require || {} }, {
-  async: 0, baseUrl: "https://bawaut.cp4a.apps.ibmdev.ibmcloudlab.com/esrimaps/dojo", hasCache: { "config-selectorEngine": "acme", "config-tlmSiblingOfDojo": 1, "dojo-built": 1, "dojo-has-api": 1, "dojo-loader": 1, "dojo-undef-api": 0, dom: 1, "extend-esri": 1, "host-browser": 1 }, packages: [{ location: "../dijit", name: "dijit" }, { location: "../dojox", name: "dojox" }, { location: "../put-selector", main: "put", name: "put-selector" },
+  async: 0, baseUrl: "https://bawaut.cp4a.apps.ibmdev.ibmcloudlab.com/dojo", hasCache: { "config-selectorEngine": "acme", "config-tlmSiblingOfDojo": 1, "dojo-built": 1, "dojo-has-api": 1, "dojo-loader": 1, "dojo-undef-api": 0, dom: 1, "extend-esri": 1, "host-browser": 1 }, packages: [{ location: "../dijit", name: "dijit" }, { location: "../dojox", name: "dojox" }, { location: "../put-selector", main: "put", name: "put-selector" },
   { location: "../xstyle", name: "xstyle" }, { location: "../dgrid", main: "OnDemandGrid", name: "dgrid" }, { location: "../dgrid1", main: "OnDemandGrid", name: "dgrid1" }, { location: "../dstore", main: "Store", name: "dstore" }, { location: "../moment", main: "moment", name: "moment" }, { location: "../esri", name: "esri" }, { location: ".", name: "dojo" }]
 });
 require({
@@ -128,25 +128,25 @@ require({
             "$1"); ca = k.exec(T);) { var qa = k.lastIndex; var ta = qa - ca[0].length; var oa = void 0, va = T, na = /\(|\)/g, ra = 1; for (na.lastIndex = qa; (oa = na.exec(va)) && (ra = ")" == oa[0] ? ra - 1 : ra + 1, 0 != ra);); if (0 != ra) throw "unmatched paren around character " + na.lastIndex + " in: " + va; qa = [b.trim(va.substring(ta, na.lastIndex)) + ";\n", na.lastIndex]; "loadInit" == ca[2] ? da.push(qa[0]) : ha.push(qa[0]); k.lastIndex = qa[1] } ca = da.concat(ha); return ca.length || !d.test(T) ? [L.replace(/(^|\s)dojo\.loadInit\s*\(/g, "\n0 \x26\x26 dojo.loadInit("), ca.join(""),
               ca] : 0
         }, x = q.initSyncLoader(f, e, function (L, T) { var da, ha = [], ca = []; if (h.test(T) || !(da = u(T))) return 0; T = L.mid + "-*loadInit"; for (var qa in B("dojo", L).result.scopeMap) ha.push(qa), ca.push('"' + qa + '"'); return "// xdomain rewrite of " + L.mid + "\ndefine('" + T + "',{\n\tnames:" + r.stringify(ha) + ",\n\tdef:function(" + ha.join(",") + "){" + da[1] + "}});\n\ndefine(" + r.stringify(ha.concat(["dojo/loadInit!" + T])) + ", function(" + ha.join(",") + "){\n" + da[0] + "});" }), n = x.sync, v = x.requested, D = x.arrived, Q = x.nonmodule, y = x.executing, A = x.executed,
-        I = x.syncExecStack, C = x.modules, H = x.execQ, B = x.getModule, K = x.injectModule, J = x.setArrived, R = x.signal, W = x.finishExec, Y = x.execModule, S = x.getLegacyMode, U = x.guardCheckComplete; f = x.dojoRequirePlugin; b.provide = function (L) { var T = I[0], da = m.mixin(B(t(L), q.module), { executed: y, result: m.getObject(L, !0) }); J(da); T && (T.provides || (T.provides = [])).push(function () { da.result = m.getObject(L); delete da.provides; da.executed !== A && W(da) }); return da.result }; z.add("config-publishRequireResult", 1, 0, 0); b.require = function (L, T) {
-          T =
-          function (da, ha) { var ca = B(t(da), q.module); if (I.length && I[0].finish) I[0].finish.push(da); else { if (ca.executed) return ca.result; ha && (ca.result = Q); ha = S(); K(ca); ha = S(); ca.executed !== A && ca.injected === D && x.guardCheckComplete(function () { Y(ca) }); if (ca.executed) return ca.result; ha == n ? ca.cjs ? H.unshift(ca) : I.length && (I[0].finish = [da]) : H.push(ca) } }(L, T); z("config-publishRequireResult") && !m.exists(L) && void 0 !== T && m.setObject(L, T); return T
-        }; b.loadInit = function (L) { L() }; b.registerModulePath = function (L, T) {
-          var da = {};
-          da[L.replace(/\./g, "/")] = T; q({ paths: da })
-        }; b.platformRequire = function (L) { L = (L.common || []).concat(L[b._name] || L["default"] || []); for (var T; L.length;)m.isArray(T = L.shift()) ? b.require.apply(b, T) : b.require(T) }; b.requireIf = b.requireAfterIf = function (L, T, da) { L && b.require(T, da) }; b.requireLocalization = function (L, T, da) { q(["../i18n"], function (ha) { ha.getLocalization(L, T, da) }) }; return {
-          extractLegacyApiApplications: u, require: f, loadInit: function (L, T, da) {
-            T([L], function (ha) {
-              T(ha.names, function () {
-                for (var ca = "", qa = [],
-                  ta = 0; ta < arguments.length; ta++)ca += "var " + ha.names[ta] + "\x3d arguments[" + ta + "]; ", qa.push(arguments[ta]); eval(ca); var oa = T.module, va = [], na; ca = { provide: function (ia) { ia = t(ia); ia = B(ia, oa); ia !== oa && J(ia) }, require: function (ia, wa) { ia = t(ia); wa && (B(ia, oa).result = Q); va.push(ia) }, requireLocalization: function (ia, wa, ya) { na || (na = ["dojo/i18n"]); ya = (ya || b.locale).toLowerCase(); ia = t(ia) + "/nls/" + (/root/i.test(ya) ? "" : ya + "/") + t(wa); B(ia, oa).isXd && na.push("dojo/i18n!" + ia) }, loadInit: function (ia) { ia() } }; ta = {}; var ra; try {
-                    for (ra in ca) ta[ra] =
-                      b[ra], b[ra] = ca[ra]; ha.def.apply(null, qa)
-                  } catch (ia) { R("error", [{ src: w.id, id: "failedDojoLoadInit" }, ia]) } finally { for (ra in ca) b[ra] = ta[ra] } na && (va = va.concat(na)); va.length ? f(va.join(","), T, da) : da()
+          I = x.syncExecStack, C = x.modules, H = x.execQ, B = x.getModule, K = x.injectModule, J = x.setArrived, R = x.signal, W = x.finishExec, Y = x.execModule, S = x.getLegacyMode, U = x.guardCheckComplete; f = x.dojoRequirePlugin; b.provide = function (L) { var T = I[0], da = m.mixin(B(t(L), q.module), { executed: y, result: m.getObject(L, !0) }); J(da); T && (T.provides || (T.provides = [])).push(function () { da.result = m.getObject(L); delete da.provides; da.executed !== A && W(da) }); return da.result }; z.add("config-publishRequireResult", 1, 0, 0); b.require = function (L, T) {
+            T =
+              function (da, ha) { var ca = B(t(da), q.module); if (I.length && I[0].finish) I[0].finish.push(da); else { if (ca.executed) return ca.result; ha && (ca.result = Q); ha = S(); K(ca); ha = S(); ca.executed !== A && ca.injected === D && x.guardCheckComplete(function () { Y(ca) }); if (ca.executed) return ca.result; ha == n ? ca.cjs ? H.unshift(ca) : I.length && (I[0].finish = [da]) : H.push(ca) } }(L, T); z("config-publishRequireResult") && !m.exists(L) && void 0 !== T && m.setObject(L, T); return T
+          }; b.loadInit = function (L) { L() }; b.registerModulePath = function (L, T) {
+            var da = {};
+            da[L.replace(/\./g, "/")] = T; q({ paths: da })
+          }; b.platformRequire = function (L) { L = (L.common || []).concat(L[b._name] || L["default"] || []); for (var T; L.length;)m.isArray(T = L.shift()) ? b.require.apply(b, T) : b.require(T) }; b.requireIf = b.requireAfterIf = function (L, T, da) { L && b.require(T, da) }; b.requireLocalization = function (L, T, da) { q(["../i18n"], function (ha) { ha.getLocalization(L, T, da) }) }; return {
+            extractLegacyApiApplications: u, require: f, loadInit: function (L, T, da) {
+              T([L], function (ha) {
+                T(ha.names, function () {
+                  for (var ca = "", qa = [],
+                    ta = 0; ta < arguments.length; ta++)ca += "var " + ha.names[ta] + "\x3d arguments[" + ta + "]; ", qa.push(arguments[ta]); eval(ca); var oa = T.module, va = [], na; ca = { provide: function (ia) { ia = t(ia); ia = B(ia, oa); ia !== oa && J(ia) }, require: function (ia, wa) { ia = t(ia); wa && (B(ia, oa).result = Q); va.push(ia) }, requireLocalization: function (ia, wa, ya) { na || (na = ["dojo/i18n"]); ya = (ya || b.locale).toLowerCase(); ia = t(ia) + "/nls/" + (/root/i.test(ya) ? "" : ya + "/") + t(wa); B(ia, oa).isXd && na.push("dojo/i18n!" + ia) }, loadInit: function (ia) { ia() } }; ta = {}; var ra; try {
+                      for (ra in ca) ta[ra] =
+                        b[ra], b[ra] = ca[ra]; ha.def.apply(null, qa)
+                    } catch (ia) { R("error", [{ src: w.id, id: "failedDojoLoadInit" }, ia]) } finally { for (ra in ca) b[ra] = ta[ra] } na && (va = va.concat(na)); va.length ? f(va.join(","), T, da) : da()
+                })
               })
-            })
+            }
           }
-        }
       })
     }, "dojo/_base/kernel": function () {
       define(["../global", "../has", "./config", "require", "module"], function (b, z, q, w, r) {
@@ -317,7 +317,7 @@ require({
             }); var Y = y.handle; Y && c.isFunction(Y) && J.addBoth(function (S) { return Y.call(y, S, H) }); J.addErrback(function (S) { return C(S, J) }); u.ioPublish && b.publish && !1 !== H.args.ioPublish && (J.addCallbacks(function (S) { b.publish("/dojo/io/load", [J, S]); return S }, function (S) { b.publish("/dojo/io/error", [J, S]); return S }), J.addBoth(function (S) { b.publish("/dojo/io/done", [J, S]); return S })); J.ioArgs = H; return J
           }; var n = function (y) { y = x[y.ioArgs.handleAs](y.ioArgs.xhr, y.ioArgs); return void 0 === y ? null : y }, v = function (y, A) {
             A.ioArgs.args.failOk ||
-            console.error(y); return y
+              console.error(y); return y
           }, D = function (y) { 0 >= Q && (Q = 0, u.ioPublish && b.publish && (!y || y && !1 !== y.ioArgs.args.ioPublish) && b.publish("/dojo/io/stop")) }, Q = 0; e.after(l, "_onAction", function () { --Q }); e.after(l, "_onInFlight", D); b._ioCancelAll = l.cancelAll; b._ioNotifyStart = function (y) { u.ioPublish && b.publish && !1 !== y.ioArgs.args.ioPublish && (Q || b.publish("/dojo/io/start"), Q += 1, b.publish("/dojo/io/send", [y])) }; b._ioWatch = function (y, A, I, C) {
             y.ioArgs.options = y.ioArgs.args; c.mixin(y, {
               response: y.ioArgs, isValid: function (H) { return A(y) },
@@ -604,10 +604,10 @@ require({
                 } function A(I) { return Q("upload", I) } d.addEventListener("load", v, !1); d.addEventListener("error", D, !1); d.addEventListener("progress", y, !1); n && d.upload && d.upload.addEventListener("progress", A, !1); return function () { d.removeEventListener("load", v, !1); d.removeEventListener("error", D, !1); d.removeEventListener("progress", y, !1); d.upload.removeEventListener("progress", A, !1); d = null }
               }
             } else {
-              c = function (d) { return d.xhr.readyState }; var e = function (d) { return 4 === d.xhr.readyState }; a = function (d, u) {
-                d = u.xhr; u = typeof d.abort;
-                "function" !== u && "object" !== u && "unknown" !== u || d.abort()
-              }
+            c = function (d) { return d.xhr.readyState }; var e = function (d) { return 4 === d.xhr.readyState }; a = function (d, u) {
+              d = u.xhr; u = typeof d.abort;
+              "function" !== u && "object" !== u && "unknown" !== u || d.abort()
+            }
           } var l, k = { data: null, query: null, sync: !1, method: "GET" }; t._create = function () { throw Error("XMLHTTP not available"); }; if (r("native-xhr") && !r("dojo-force-activex-xhr")) t._create = function () { return new XMLHttpRequest }; else if (r("activex")) try { new ActiveXObject("Msxml2.XMLHTTP"), t._create = function () { return new ActiveXObject("Msxml2.XMLHTTP") } } catch (d) { try { new ActiveXObject("Microsoft.XMLHTTP"), t._create = function () { return new ActiveXObject("Microsoft.XMLHTTP") } } catch (u) { } } w.addCommonMethods(t);
           return t
         })
@@ -660,7 +660,7 @@ require({
         function q(d) { h.push(d); t && w() } function w() { if (!c) { for (c = !0; h.length;)try { h.shift()(r) } catch (d) { console.error(d, "in domReady callback", d.stack) } c = !1; q._onQEmpty() } } var r = document, m = { loaded: 1, complete: 1 }, p = "string" != typeof r.readyState, t = !!m[r.readyState], h = [], c; q.load = function (d, u, x) { q(x) }; q._Q = h; q._onQEmpty = function () { }; p && (r.readyState = "loading"); if (!t) {
           var a = [], f = function (d) {
             d =
-            d || b.event; t || "readystatechange" == d.type && !m[r.readyState] || (p && (r.readyState = "complete"), t = 1, w())
+              d || b.event; t || "readystatechange" == d.type && !m[r.readyState] || (p && (r.readyState = "complete"), t = 1, w())
           }, e = function (d, u) { d.addEventListener(u, f, !1); h.push(function () { d.removeEventListener(u, f, !1) }) }; if (!z("dom-addeventlistener")) { e = function (d, u) { u = "on" + u; d.attachEvent(u, f); h.push(function () { d.detachEvent(u, f) }) }; var l = r.createElement("div"); try { l.doScroll && null === b.frameElement && a.push(function () { try { return l.doScroll("left"), 1 } catch (d) { } }) } catch (d) { } } e(r, "DOMContentLoaded"); e(b, "load"); "onreadystatechange" in
             r ? e(r, "readystatechange") : p || a.push(function () { return m[r.readyState] }); if (a.length) { var k = function () { if (!t) { for (var d = a.length; d--;)if (a[d]()) { f("poller"); return } setTimeout(k, 30) } }; k() }
         } return q
@@ -761,7 +761,7 @@ require({
             function (a, f) { a = q.byId(a); var e = f || w.getComputedStyle(a); f = a.clientWidth; var l = h.getPadExtents(a, e); var k = h.getBorderExtents(a, e); e = a.offsetLeft + l.l + k.l; var d = a.offsetTop + l.t + k.t; f ? k = a.clientHeight : (f = a.offsetWidth - k.w, k = a.offsetHeight - k.h); if (8 == b("ie") && !b("quirks")) { var u = a.parentNode, x = w.toPixelValue; u && (u = w.getComputedStyle(u), e -= "none" != u.borderLeftStyle ? x(a, u.borderLeftWidth) : 0, d -= "none" != u.borderTopStyle ? x(a, u.borderTopWidth) : 0) } return { l: e, t: d, w: f - l.w, h: k - l.h } }; h.setContentSize = function (a,
               f, e) { a = q.byId(a); var l = f.w; f = f.h; p(a) && (e = h.getPadBorderExtents(a, e), 0 <= l && (l += e.w), 0 <= f && (f += e.h)); r(a, NaN, NaN, l, f) }; var c = { l: 0, t: 0, w: 0, h: 0 }; h.setMarginBox = function (a, f, e) { a = q.byId(a); var l = e || w.getComputedStyle(a); e = f.w; var k = f.h, d = p(a) ? c : h.getPadBorderExtents(a, l); l = h.getMarginExtents(a, l); if (b("webkit") && m(a)) { var u = a.style; 0 <= e && !u.width && (u.width = "4px"); 0 <= k && !u.height && (u.height = "4px") } 0 <= e && (e = Math.max(e - d.w - l.w, 0)); 0 <= k && (k = Math.max(k - d.h - l.h, 0)); r(a, f.l, f.t, e, k) }; h.isBodyLtr = function (a) {
                 a =
-                a || z.doc; return "ltr" == (z.body(a).dir || a.documentElement.dir || "ltr").toLowerCase()
+                  a || z.doc; return "ltr" == (z.body(a).dir || a.documentElement.dir || "ltr").toLowerCase()
               }; h.docScroll = function (a) { a = a || z.doc; var f = a.parentWindow || a.defaultView; return "pageXOffset" in f ? { x: f.pageXOffset, y: f.pageYOffset } : (f = b("quirks") ? z.body(a) : a.documentElement) && { x: h.fixIeBiDiScrollLeft(f.scrollLeft || 0, a), y: f.scrollTop || 0 } }; h.getIeDocumentElementOffset = function (a) { return { x: 0, y: 0 } }; h.fixIeBiDiScrollLeft = function (a, f) {
                 f = f || z.doc; var e = b("ie"); if (e && !h.isBodyLtr(f)) {
                   var l = b("quirks"); f = l ? z.body(f) : f.documentElement;
@@ -946,7 +946,7 @@ require({
           "*\x3d": function (E, G) { return function (M) { return 0 <= k(M, E).indexOf(G) } }, "^\x3d": function (E, G) { return function (M) { return 0 == k(M, E).indexOf(G) } }, "$\x3d": function (E, G) {
             return function (M) {
               M =
-              " " + k(M, E); var P = M.lastIndexOf(G); return -1 < P && P == M.length - G.length
+                " " + k(M, E); var P = M.lastIndexOf(G); return -1 < P && P == M.length - G.length
             }
           }, "~\x3d": function (E, G) { var M = " " + G + " "; return function (P) { return 0 <= (" " + k(P, E) + " ").indexOf(M) } }, "|\x3d": function (E, G) { var M = G + "-"; return function (P) { P = k(P, E); return P == G || 0 == P.indexOf(M) } }, "\x3d": function (E, G) { return function (M) { return k(M, E) == G } }
         }; w = r.doc.documentElement; var u = !(w.nextElementSibling || "nextElementSibling" in w), x = u ? "nextSibling" : "nextElementSibling", n = u ? "previousSibling" : "previousElementSibling", v = u ? l : c, D = function (E) {
@@ -981,7 +981,7 @@ require({
             M && (G = R(P)); else if (E.id) P = !E.loops && aa ? c : B(E, { el: 1, id: 1 }), G = function (Z, ea) { var pa = b.byId(E.id, Z.ownerDocument || Z); Z.ownerDocument && !W(Z, Z.ownerDocument) && q.some(11 === Z.nodeType ? Z.childNodes : [Z], function (ma) { ma = R(function (ua) { return ua.id === E.id }, !0)(ma, []); if (ma.length) return pa = ma[0], !1 }); if (pa && P(pa) && (9 == Z.nodeType || W(pa, Z))) return e(pa, ea) }; else if (ba && /\{\s*\[native code\]\s*\}/.test(String(ba)) && E.classes.length && !t) {
               P = B(E, { el: 1, classes: 1, id: 1 }); var la = E.classes.join(" "); G = function (Z, ea, pa) {
                 ea =
-                e(0, ea); for (var ma, ua = 0, sa = Z.getElementsByClassName(la); ma = sa[ua++];)P(ma, Z) && ia(ma, pa) && ea.push(ma); return ea
+                  e(0, ea); for (var ma, ua = 0, sa = Z.getElementsByClassName(la); ma = sa[ua++];)P(ma, Z) && ia(ma, pa) && ea.push(ma); return ea
               }
             } else aa || E.loops ? (P = B(E, { el: 1, tag: 1, id: 1 }), G = function (Z, ea, pa) { ea = e(0, ea); for (var ma, ua = 0, sa = (ma = E.getTag()) ? Z.getElementsByTagName(ma) : []; ma = sa[ua++];)P(ma, Z) && ia(ma, pa) && ea.push(ma); return ea }) : G = function (Z, ea, pa) { ea = e(0, ea); var ma = 0, ua = E.getTag(); for (ua = ua ? Z.getElementsByTagName(ua) : []; Z = ua[ma++];)ia(Z, pa) && ea.push(Z); return ea }; return Y[E.query] = G
         }, U = {}, L = {}, T = function (E) {
